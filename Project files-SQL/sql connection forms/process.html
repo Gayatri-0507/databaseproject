@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="myntra.css">
+</head>
+<body>
+  <div class="style">
+    <form action="http://localhost:3000/myntra" method="POST" class="form">
+    <table>
+      <caption>Signup Form</caption>
+      <tr>
+        <td><label for="username">Username:</label></td>
+        <td><input type="text" id="username" name="username" required></td>
+      </tr>
+      <tr>
+        <td><label for="username">UserId:</label></td>
+        <td><input type="text" id="userId" name="userId" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" id="password" name="password" required></td>
+      </tr>
+      <tr>
+        <td><label for="confirm_password">Confirm Password:</label></td>
+        <td><input type="password" id="confirm_password" name="confirm_password" required></td>
+      </tr>
+      <tr>
+        <td><label for="name">Full Name:</label></td>
+        <td><input type="text" id="fullName" name="fullName"></td>
+      </tr>
+      <tr>
+        <td><label for="dob">Date of Birth:</label></td>
+        <td><input type="date" id="dob" name="dob"></td>
+      </tr>
+      <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td>
+          <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="address">Address:</label></td>
+        <td><textarea id="address" name="address" rows="4"></textarea></td>
+      </tr>
+      <tr>
+        <td><label for="phone">Phone:</label></td>
+        <td><input type="tel" id="phone" name="phone"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label>
+            <input type="checkbox" id="terms" name="terms" required>
+            I accept the terms and conditions
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Sign Up">
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>

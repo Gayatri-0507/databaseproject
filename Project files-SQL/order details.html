@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <h1>Order Details</h1>
+    <form>
+        <label for="orderID">Order ID:</label>
+        <input type="text" id="orderID" name="orderID" required>
+        <button type="button" id="fetchOrder">Fetch Order Details</button>
+        <br><br>
+
+        <label for="customerID">Customer ID:</label>
+        <input type="text" id="customerID" name="customerID" readonly>
+        <br><br>
+
+        <label for="orderDate">Order Date:</label>
+        <input type="text" id="orderDate" name="orderDate" readonly>
+        <br><br>
+
+        <label for="totalAmount">Total Amount:</label>
+        <input type="text" id="totalAmount" name="totalAmount" readonly>
+        <br><br>
+
+        <label for="shippingAddress">Shipping Address:</label>
+        <textarea id="shippingAddress" name="shippingAddress" rows="4" cols="50" readonly></textarea>
+        <br><br>
+
+        <label for="paymentMethod">Payment Method:</label>
+        <input type="text" id="paymentMethod" name="paymentMethod" readonly>
+        <br><br>
+
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" readonly>
+    </form>
+</body>
+</html>
+

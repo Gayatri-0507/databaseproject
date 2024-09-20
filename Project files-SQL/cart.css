@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-image: url(https://th.bing.com/th/id/OIP.IvRT4qmoieUgkM-IL2gsfwHaEL?w=300&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+    background-repeat: repeat;
+    background-size: 200px;
+
+}
+
+
+
+.cart {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.cart table {
+    width: 100%;
+    border-collapse:initial;
+
+}
+
+.cart table, .cart th, .cart td {
+    border: 1px solid #111010;
+}
+
+.cart th, .cart td {
+    padding: 10px;
+    text-align: left;
+}
+
+.cart th {
+    background-color: #f2f2f2;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total span {
+    font-weight: bold;
+}

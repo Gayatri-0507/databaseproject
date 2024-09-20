@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="promotion.css">
+    <title>Promotion Details</title>
+</head>
+<body>
+    <div class="promotion">
+        <h1>Promotion Details</h1>
+        <div class="promotion-card">
+            <img id="promotionImage" src="" alt="Promotion Image">
+            <div class="promotion-info">
+                <label for="promotionCode">Enter Promotion Code:</label>
+                <input type="text" id="promotionCode" placeholder="Promotion Code">
+                <button onclick="getPromotionDetails()">Get Details</button>
+                <h2>Promotion Code: <span id="promoCodeSpan"></span></h2>
+                <p>Description: <span id="descriptionSpan"></span></p>
+                <p>Discount Percentage: <span id="discountSpan"></span></p>
+                <p>Start Date: <span id="startDateSpan"></span></p>
+                <p>End Date: <span id="endDateSpan"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

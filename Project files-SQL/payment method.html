@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method Selection</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <h1>Select a Payment Method</h1>
+    <form id="payment-form">
+        <label for="credit-card">
+            <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+            Credit Card
+        </label>
+
+        <label for="paypal">
+            <input type="radio" id="paypal" name="payment-method" value="paypal">
+            PayPal
+        </label>
+
+        <label for="google-pay">
+            <input type="radio" id="google-pay" name="payment-method" value="google-pay">
+            Google Pay
+        </label>
+
+        <label for="apple-pay">
+            <input type="radio" id="apple-pay" name="payment-method" value="apple-pay">
+            Apple Pay
+        </label>
+
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</body>
+</html>

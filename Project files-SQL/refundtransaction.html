@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Transaction</title>
+    <link rel="stylesheet" href="refund.css">
+</head>
+<body>
+    <h1>Refund Transaction</h1>
+    <form class="refund-form">
+        <label for="orderID">Order ID:</label>
+        <input type="text" id="orderID" name="orderID" required><br><br>
+
+        <label for="refundAmount">Refund Amount:</label>
+        <input type="number" id="refundAmount" name="refundAmount" step="0.01" required><br><br>
+
+        <label for="reason">Reason:</label>
+        <input type="text" id="reason" name="reason" required><br><br>
+
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" required><br><br>
+
+        <button type="button" onclick="generateRefundID()">Generate Refund ID</button><br><br>
+
+        <label for="refundID">Refund ID:</label>
+        <input type="text" id="refundID" name="refundID" readonly><br><br>
+
+        <button type="submit">Submit Refund</button>
+    </form>
+
+    <script>
+        function generateRefundID() {
+            const orderID = document.getElementById("orderID").value;
+            const refundAmount = document.getElementById("refundAmount").value;
+            const reason = document.getElementById("reason").value;
+            const status = document.getElementById("status").value;
+
+            // Generate a refund ID (you can use a more robust method if needed)
+            const refundID = "REF" + new Date().getTime();
+
+            // Set the generated refund ID in the input field
+            document.getElementById("refundID").value = refundID;
+        }
+    </script>
+</body>
+</html>
+

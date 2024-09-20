@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <h1>Product Details</h1>
+    <form>
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <button type="button" onclick="generateProductDetails()">Show Product</button>
+
+        <div id="productDetails" style="display: none;">
+            <h2>Product Details</h2>
+            <table>
+                <tr>
+                    <td>Image:</td>
+                    <td>Name:</td>
+                    <td>Description:</td>
+                    <td>Price:</td>
+                    <td>Stock Quantity:</td>
+                </tr>
+                <tr>
+                    <td><img id="displayImage" src="" alt="Product Image" style="max-width: 100px;"></td>
+                    <td><input type="text" id="displayProductName" readonly></td>
+                    <td><input type="text" id="displayProductDescription" readonly></td>
+                    <td><input type="text" id="displayProductPrice" readonly></td>
+                    <td><input type="text" id="displayStockQuantity" readonly></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <script>
+        function generateProductDetails() {
+            const productName = document.getElementById('productName').value;
+            const productDetails = getProductDetailsFromDatabase(productName);
+
+            if (productDetails) {
+                document.getElementById('displayProductName').value = productName;
+                document.getElementById('displayProductDescription').value = productDetails.description;
+                document.getElementById('displayProductPrice').value = productDetails.price;
+                document.getElementById('displayStockQuantity').value = productDetails.stockQuantity;
+                document.getElementById('displayImage').src = productDetails.imageURL; // Set the image source
+                document.getElementById('productDetails').style.display = 'block';
+            } else {
+                alert('Product not found. Please enter a valid product name.');
+            }
+            function decreaseStock() {
+            const stockElement = document.getElementById("productStock");
+            let stockQuantity = parseInt(stockElement.innerText);
+
+            if (stockQuantity > 0) {
+                stockQuantity -= 1;
+                stockElement.innerText = stockQuantity;
+            } else {
+                alert("Product is out of stock.");
+            }
+        }
+        }
+
+        function getProductDetailsFromDatabase(productName) {
+            // This is a placeholder for database lookup.
+            // You should replace this with actual code to retrieve product details.
+            // For this example, we're returning predefined data.
+            const products = {
+                "Product1": {
+                    description: "Description for Product 1",
+                    price: 10.99,
+                    stockQuantity: 100,
+                    imageURL: "https://th.bing.com/th/id/OIP.0MTCqsdUtFVX1yl947LukAHaE8?w=281&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                },
+                "Product2": {
+                    description: "Description for Product 2",
+                    price: 19.99,
+                    stockQuantity: 50,
+                    imageURL: "product2.jpg",
+                },
+                // Add more products as needed
+            };
+
+            return products[productName];
+        }
+    </script>
+</body>
+</html>
+
+

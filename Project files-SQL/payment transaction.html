@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Transaction Details</title>
+    <link rel="stylesheet" href="paytransaction.css">
+</head>
+<body>
+    <h1>Payment Transaction Details</h1>
+    <form action="process_payment.php" method="POST">
+        <div>
+            <label for="transactionID">Transaction ID:</label>
+            <input type="text" id="transactionID" name="transactionID" required>
+            <button type="button" onclick="fetchTransactionDetails()">Fetch Details</button>
+        </div>
+        <div>
+            <label for="orderID">Order ID:</label>
+            <input type="text" id="orderID" name="orderID" required>
+        </div>
+        <div>
+            <label for="paymentMethodID">Payment Method ID:</label>
+            <input type="text" id="paymentMethodID" name="paymentMethodID" required>
+        </div>
+        <div>
+            <label for="transactionDate">Transaction Date:</label>
+            <input type="datetime-local" id="transactionDate" name="transactionDate" required>
+        </div>
+        <div>
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" required>
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
+
